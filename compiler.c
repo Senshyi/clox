@@ -399,8 +399,7 @@ bool compile(const char *source, Chunk *chunk) {
     parser.panicMode = false;
 
     advance();
-    // expression();
-    // consume(TOKEN_EOF, "Expect end of expression.");
+
     while (!match(TOKEN_EOF)) {
         declaration();
     }

@@ -128,6 +128,6 @@ ObjString *tableFindString(Table *table, const char *chars, int length,
                    memcmp(entry->key->chars, chars, length) == 0) {
             return entry->key;
         }
+        index = (index + 1) % table->capacity;
     }
-    index = (index + 1) % table->capacity;
 }
